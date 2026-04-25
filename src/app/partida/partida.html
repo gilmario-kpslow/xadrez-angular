@@ -1,0 +1,19 @@
+@if(tipo() == undefined) {
+<app-seleciona-cor (selecionado)="selecionaTipo($event)"></app-seleciona-cor>
+
+} @else {
+<div class="text-center fs-3">
+    Você está com as {{tipo()}}
+</div>
+
+<div class="d-flex justify-content-center align-items-center">
+    <app-tabuleiro [pecas]="jogo.pecas()" [tipo]="tipo()">OK</app-tabuleiro>
+</div>
+}
+
+<div class="border rounded mt-3 py-3">
+    <div class="text-center">
+        <button class="btn btn-success me-2" type="button" (click)="iniciar()">Iniciar</button>
+        <button class="btn btn-success" type="button">Pausar</button>
+    </div>
+</div>

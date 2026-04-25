@@ -1,0 +1,16 @@
+:host div {
+    height: 75px;
+    width: 75px;
+}
+
+:host .campo-pretas {
+    background-color: #000;
+}
+
+:host div:hover {
+    background-color: #24cfcf;
+}
+
+:host span {
+    color: rgb(100, 100, 100);
+}

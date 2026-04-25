@@ -1,1 +1,27 @@
 /* You can add global styles to this file, and also import other style files */
+html,
+body {
+    height: 100vh;
+    margin: 0;
+}
+
+.main {
+    height: 100vh;
+}
+
+.main .centro {
+    height: 50vh;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.pretas {
+    color: rgb(100, 100, 100);
+    background-color: transparent !important;
+}
+
+.brancas {
+    color: rgb(200, 200, 200);
+}

@@ -1,0 +1,8 @@
+<div class="m-1 campo-{{cor()}} border d-flex justify-content-center align-items-center"
+    [ngClass]="{'bg-danger': marcado(), 'bg-success': movimentoPossivel()}" (click)="marcar()">
+    @if(peca()) {
+    <fa-icon [size]="'2x'" [icon]="peca()?.icone" [ngClass]="peca()!.cor"></fa-icon>
+    } @else {
+    <span>{{letra()}} {{numero()}}</span>
+    }
+</div>

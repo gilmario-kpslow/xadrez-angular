@@ -1,0 +1,52 @@
+<div class="d-flex border pe-5 pt-5">
+    <div class="d-flex ms-2 flex-column justify-content-center">
+        @for(i of numeros(); track i; let idxi = $index, ei = $even) {
+        <div class="align-self-center justify-content-center align-items-center m-1 p-2 d-flex" style="height: 75px;">
+            {{i}}</div>
+        }
+        <div style="height: 35px;"></div>
+    </div>
+    <div class="d-flex flex-column">
+        <div class="tabuleiro border border-warning p-2">
+
+            @for(i of posicoes(); track i; let idxi = $index, ei = $even) {
+            <div class="d-flex">
+                @for(j of i; track j; let idxj = $index, ej = $even) {
+                <app-campo (clicado)="mostrarMovimentos(j)" [cor]="(((idxj + idxi)) % 2 == 0) ? 'brancas' : 'pretas'"
+                    [posicao]="j"></app-campo>
+                }
+            </div>
+            }
+
+        </div>
+
+        <div class="d-flex justify-content-center">
+            @for(j of letras(); track j; let idx = $index, e = $even) {
+            <div class="justify-content-center align-items-center text-center m-1" style="width: 75px;">{{j}}
+            </div>
+            }
+        </div>
+    </div>
+</div>
+
+<!-- <div class="d-flex">
+
+    <fa-icon [icon]="icones.faChessRook" [size]="'10x'" class="text-light bg-black"></fa-icon>
+    <fa-icon [icon]="icones.faChessKnight" [size]="'10x'"></fa-icon>
+    <fa-icon [icon]="icones.faChessBishop" size="10x"></fa-icon>
+    <fa-icon [icon]="icones.faChessQueen" [size]="'10x'"></fa-icon>
+    <fa-icon [icon]="icones.faChessKing" [size]="'10x'"></fa-icon>
+    <fa-icon [icon]="icones.faChessBishop" size="10x"></fa-icon>
+    <fa-icon [icon]="icones.faChessKnight" [size]="'10x'"></fa-icon>
+    <fa-icon [icon]="icones.faChessRook" [size]="'10x'"></fa-icon>
+</div>
+<div class="d-flex mt-3">
+    <fa-icon [icon]="icones.faChessPawn" [size]="'10x'"></fa-icon>
+    <fa-icon [icon]="icones.faChessPawn" [size]="'10x'"></fa-icon>
+    <fa-icon [icon]="icones.faChessPawn" [size]="'10x'"></fa-icon>
+    <fa-icon [icon]="icones.faChessPawn" [size]="'10x'"></fa-icon>
+    <fa-icon [icon]="icones.faChessPawn" [size]="'10x'"></fa-icon>
+    <fa-icon [icon]="icones.faChessPawn" [size]="'10x'"></fa-icon>
+    <fa-icon [icon]="icones.faChessPawn" [size]="'10x'"></fa-icon>
+    <fa-icon [icon]="icones.faChessPawn" [size]="'10x'"></fa-icon>
+</div> -->
