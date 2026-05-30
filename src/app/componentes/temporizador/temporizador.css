@@ -1,0 +1,22 @@
+.temporizador-container {
+    text-align: center;
+    padding: 15px;
+    background-color: #1a1a1a;
+    /* Dark background for digital look */
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 255, 0, 0.3);
+    /* Neon glow effect */
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.tempo {
+    font-size: 4rem;
+    font-weight: bold;
+    color: #00ff00;
+    text-shadow: 0 0 10px #00ff00;
+}
+
+.data {
+    font-size: 1.2rem;
+    color: #aaa;
+}

@@ -1,0 +1,4 @@
+{
+    "ollamaAgent.serverUrl": "http://localhost:11434",
+    "ollamaAgent.model": "gemma4"
+}

@@ -62,7 +62,6 @@ export class TabuleiroComponent {
   }
 
   private posicionarPecas() {
-    console.log('Posiciona pecas', this.pecas())
 
     this.campos().forEach(c => {
       const pe = this.pecas().find(p => p.posicao.numero == c.posicao().numero && p.posicao.letra == c.posicao().letra);
@@ -104,3 +103,4 @@ export class TabuleiroComponent {
   }
 
 }
+

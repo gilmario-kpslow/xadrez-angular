@@ -1,0 +1,26 @@
+.clock-container {
+    text-align: center;
+    padding: 20px;
+    background-color: #1a1a1a;
+    /* Dark background for digital look */
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 255, 0, 0.3);
+    /* Neon glow effect */
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.digital-display {
+    font-size: 4rem;
+    /* Large font size for hours:minutes:seconds */
+    font-weight: bold;
+    color: #00ff00;
+    /* Bright green text */
+    margin-bottom: 10px;
+    text-shadow: 0 0 10px #00ff00;
+    /* Enhance the glow */
+}
+
+.date-display {
+    font-size: 1.2rem;
+    color: #aaa;
+}

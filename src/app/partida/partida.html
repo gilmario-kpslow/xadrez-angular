@@ -9,11 +9,15 @@
 <div class="d-flex justify-content-center align-items-center">
     <app-tabuleiro [pecas]="jogo.pecas()" [tipo]="tipo()">OK</app-tabuleiro>
 </div>
+
 }
+<div class="" style="width: 400px; z-index: 9999;">
+    <app-temporizador [tempo]="300"></app-temporizador>
+</div>
 
 <div class="border rounded mt-3 py-3">
     <div class="text-center">
         <button class="btn btn-success me-2" type="button" (click)="iniciar()">Iniciar</button>
-        <button class="btn btn-success" type="button">Pausar</button>
+        <button class="btn btn-success" type="button" (click)="parar()">Pausar</button>
     </div>
 </div>
