@@ -2,7 +2,6 @@ import { ChangeDetectionStrategy, Component, inject, model, signal, viewChild } 
 import { TabuleiroComponent } from "../componentes/tabuleiro/tabuleiro";
 import { SelecionaCor } from '../componentes/seleciona-cor/seleciona-cor';
 import { JogoControle } from '../core/inteligence/jogo-controle';
-import { DigitalClockComponent } from "../componentes/digital-clock/digital-clock";
 import { Temporizador } from '../componentes/temporizador/temporizador';
 
 @Component({
@@ -17,7 +16,8 @@ export class Partida {
   tipo = model<'pretas' | 'brancas'>('brancas');
   jogo = inject(JogoControle);
   tabuleiro = viewChild(TabuleiroComponent);
-  relogioBrancas = viewChild(Temporizador);
+  relogioBrancas = viewChild<Temporizador>("relogioBrancas");
+  relogioPretas = viewChild<Temporizador>("relogioPretas");
 
 
   selecionaTipo(cor: 'pretas' | 'brancas') {
@@ -29,7 +29,19 @@ export class Partida {
     this.tabuleiro()?.iniciar()
     this.relogioBrancas()?.iniciar()
   }
+
   parar() {
     this.relogioBrancas()?.parar()
+    this.relogioPretas()?.parar()
+  }
+
+  passar() {
+    this.relogioBrancas()?.parar()
+    this.relogioPretas()?.iniciar()
+  }
+
+  alternar() {
+    this.relogioBrancas()?.iniciar()
+    this.relogioPretas()?.parar()
   }
 }
